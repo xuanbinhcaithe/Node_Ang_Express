@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            display: block;
+            clear: both;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <select name="selectCate">
+            <% Cates.forEach(function(cate) {%>
+            <option value="<%- cate._id%>"> <%- cate.name%> </option>
+            <%})%>
+        </select>
+        <input type="text" name="txtName" placeholder="enter name">
+        <input type="file" name="imageBook">
+        <input type="text" name="txtFile">
+        <input type="submit" value="Add book">
+    </form>
+</body>
+
+</html>
